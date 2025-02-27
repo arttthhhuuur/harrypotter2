@@ -1,0 +1,106 @@
+class Varinha {
+    private madeira: string;
+    private nucleo: string;
+    private tamanho: number;
+  
+    constructor(madeira: string, nucleo: string, tamanho: number) {
+      this.madeira = madeira;
+      this.nucleo = nucleo;
+      this.tamanho = tamanho;
+    }
+  
+    getMadeira(): string {
+      return this.madeira;
+    }
+  
+    setMadeira(madeira: string): void {
+      this.madeira = madeira;
+    }
+  
+    getNucleo(): string {
+      return this.nucleo;
+    }
+  
+    setNucleo(nucleo: string): void {
+      this.nucleo = nucleo;
+    }
+  
+    getTamanho(): number {
+      return this.tamanho;
+    }
+  
+    setTamanho(tamanho: number): void {
+      this.tamanho = tamanho;
+    }
+  
+    exibirDetalhes(): void {
+      console.log(
+        `Varinha de madeira de ${this.madeira}, núcleo de ${this.nucleo} e tamanho ${this.tamanho} cm.`
+      );
+    }
+  }
+  
+  class ChapeuSeletor {
+    private casa: string;
+    private casas: string[] = ["Grifinória", "Sonserina", "Corvinal", "Lufa-Lufa"];
+  
+    constructor() {
+      this.casa = "";
+    }
+  
+    selecionarCasa(): void {
+      const indice = Math.floor(Math.random() * 4);
+      this.casa = this.casas[indice];
+    }
+  
+    exibirCasa(): void {
+      if (!this.casa) {
+        console.log("O Chapéu ainda não selecionou uma casa!");
+      } else {
+        console.log(`A casa escolhida foi: ${this.casa}`);
+      }
+    }
+  }
+  
+  class Feitiço {
+    private nome: string;
+    private tipo: string;
+    private poder: number;
+  
+    constructor(nome: string, tipo: string, poder: number) {
+      this.nome = nome;
+      this.tipo = tipo;
+      this.poder = poder;
+    }
+  
+    getNome(): string {
+      return this.nome;
+    }
+  
+    setNome(nome: string): void {
+      this.nome = nome;
+    }
+  
+    getTipo(): string {
+      return this.tipo;
+    }
+  
+    setTipo(tipo: string): void {
+      this.tipo = tipo;
+    }
+  
+    getPoder(): number {
+      return this.poder;
+    }
+  
+    setPoder(poder: number): void {
+      this.poder = poder;
+    }
+  
+    lancarFeitiço(): void {
+      console.log(
+        `O feitiço ${this.nome} do tipo ${this.tipo} com poder ${this.poder} foi lançado!`
+      );
+    }
+  }
+  
